@@ -1,14 +1,12 @@
 package middleware
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 )
 
-var (
-	traceIDHeader = http.CanonicalHeaderKey("TraceId")
+const (
+	traceIDHeader = "X-Trace-Id"
 )
 
 func TraceID() gin.HandlerFunc {
